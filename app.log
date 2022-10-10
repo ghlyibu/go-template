@@ -1,0 +1,7 @@
+{"level":"DEBUG","time":"2022-10-03T19:41:46.556+0800","caller":"go-template/main.go:33","msg":"logger init success..."}
+{"level":"DEBUG","time":"2022-10-03T19:42:43.491+0800","caller":"go-template/main.go:33","msg":"logger init success..."}
+{"level":"DEBUG","time":"2022-10-03T19:44:41.698+0800","caller":"go-template/main.go:33","msg":"logger init success..."}
+{"level":"DEBUG","time":"2022-10-03T19:45:00.567+0800","caller":"go-template/main.go:33","msg":"logger init success..."}
+{"level":"INFO","time":"2022-10-03T19:45:08.620+0800","caller":"logger/logger.go:71","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36","errors":"","cost":0}
+{"level":"INFO","time":"2022-10-03T19:46:33.072+0800","caller":"go-template/main.go:69","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-10-03T19:46:33.072+0800","caller":"go-template/main.go:78","msg":"Server exiting"}
