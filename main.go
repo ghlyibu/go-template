@@ -18,7 +18,6 @@ func main() {
 			fmt.Printf("init setting failed, err:%v\n", err)
 			return
 		}
-		return
 	} else if err := setting.Init(os.Args[1]); err != nil {
 		fmt.Printf("init setting failed, err:%v\n", err)
 		return
@@ -40,7 +39,7 @@ func main() {
 		return
 	}
 	defer redis.Close()
-	// 5. 注册路由
+	//// 5. 注册路由
 	r := routes.SetupRouter(setting.Conf.AppLConfig.Mode)
 	// 6. 启动服务
 	if err := r.Run(fmt.Sprintf(":%d", setting.Conf.AppLConfig.Port)); err != nil {
