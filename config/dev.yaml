@@ -2,7 +2,7 @@ name: "go-template"
 app:
   mode: "dev"
   port: 8084
-  start_time: "2022-10-01"
+  start_time: "2020-07-01"
   machine_id: 1
   authHeader: "Authorization"
   version: "v0.0.1"

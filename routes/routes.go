@@ -1,12 +1,15 @@
 package routes
 
 import (
+	"github.com/gin-contrib/pprof"
+	"github.com/gin-gonic/gin"
+	swaggerFiles "github.com/swaggo/files"
+	ginSwagger "github.com/swaggo/gin-swagger"
+	"go-template/controller"
+	_ "go-template/docs"
 	"go-template/logger"
 	"go-template/middlewares"
 	"net/http"
-
-	"github.com/gin-contrib/pprof"
-	"github.com/gin-gonic/gin"
 )
 
 func SetupRouter(mode string) *gin.Engine {
@@ -20,8 +23,10 @@ func SetupRouter(mode string) *gin.Engine {
 		c.String(http.StatusOK, "ok")
 	})
 
+	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 	v1 := r.Group("/api/v1")
-
+	// 注册
+	v1.POST("/signup", controller.SignUpHandler)
 	v1.Use(middlewares.JWTAuthMiddleware()) // 应用JWT认证中间件
 
 	pprof.Register(r) // 注册pprof相关路由

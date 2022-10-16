@@ -4,6 +4,7 @@ app:
   port: 8084
   start_time: "2022-10-01"
   machine_id: 1
+  authHeader: "Authorization"
   version: "v0.0.1"
 log:
   level: "info"
